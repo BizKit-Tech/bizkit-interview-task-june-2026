@@ -33,6 +33,14 @@ No database or other tools are needed — just Python and a web browser.
 
 ---
 
+## Getting your own copy
+
+Before anything else:
+
+Click **"Use this template"** on this repository to create your own copy, then clone it to your local machine to work on it.
+
+---
+
 ## Running the app
 
 We recommend using a virtual environment so the dependencies stay isolated.
