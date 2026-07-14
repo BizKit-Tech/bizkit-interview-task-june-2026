@@ -78,7 +78,7 @@ When you're done working, you can leave the virtual environment with `deactivate
 ### 3. Add a rule: no booking equipment under maintenance
 Equipment can have a status of `maintenance` (the HD Projector is one). Right now it can still be booked and still shows up as available. **Add the rule that maintenance equipment cannot be booked**, and make sure it no longer appears as available. Think about all the places this rule needs to apply.
 
-There's more than one reasonable way to handle this in the UI — e.g. hide maintenance equipment from the list entirely, or show it disabled with a reason. Pick one and add a one-sentence justification for your choice to `NOTES.md` (see Task 5).
+There's more than one reasonable way to handle this in the UI. Pick one and add a one-sentence justification for your choice to `NOTES.md` (see Task 5).
 
 ### 4. The frontend price bug
 On the booking page, change the **start** date and the total updates. Change the **end** date and it... doesn't always. Find and fix it so the total stays correct.
@@ -97,7 +97,7 @@ Please include a `NOTES.md` with four quick things — keep it brief, no essays:
 
 ## What to send back
 
-- The fixed code (a git repo — small commits with clear messages are appreciated).
+- The fixed code, as a git repo with at least **one commit per task or per function touched (as appropriate)** (Tasks 1-4 above, plus anything else you find and fix along the way). We read the commit history as part of the review, not just the final diff, so please write descriptive commit messages.
 - Your `NOTES.md` (the four short items from Task 5).
 
 Passing the assessment leads to a follow-up call. We'll ask you to explain one of your fixes, then collaborate on adding a small feature, so approach each fix in a way you can clearly understand and discuss.
