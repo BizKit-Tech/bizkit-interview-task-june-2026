@@ -9,7 +9,11 @@ Business rules:
   - A booking reserves one piece of equipment for a date range.
   - Rentals are billed *inclusively*: both the start day and the end day count.
     (A pick-up-and-return-same-day rental is therefore 1 day.)
-  - You cannot book a piece of equipment for dates that overlap an existing booking.
+  - You cannot book a piece of equipment for dates that overlap an existing booking,
+    EXCEPT for same-day turnover: a new booking may start on the same day an
+    existing booking for that equipment ends (or end on the day another booking
+    starts). That single shared day is not a conflict; any other overlap still is.
+  - Rentals of 7 days or more get a 10% discount off the total.
 """
 
 from datetime import date
@@ -61,30 +65,38 @@ def parse_date(value):
 
 
 def rental_days(from_date, to_date):
-    """Number of days a rental covers."""
-    return (to_date - from_date).days
+    """Number of days this rental covers (see business rules above).
+
+    TODO (Task 1): implement.
+    """
+    raise NotImplementedError
 
 
 def dates_overlap(start_a, end_a, start_b, end_b):
-    """True if date range A overlaps date range B."""
-    return start_b <= start_a <= end_b
+    """True if date range A conflicts with date range B (see the
+    same-day-turnover rule above).
+
+    TODO (Task 1): implement.
+    """
+    raise NotImplementedError
 
 
 def find_conflicting_booking(equipment_id, from_date, to_date, bookings):
-    """Return an existing booking that clashes with this one, or None."""
-    for booking in bookings:
-        if booking["equipment_id"] != equipment_id:
-            continue
-        if booking.get("status") == "cancelled":
-            continue
-        if dates_overlap(
-            from_date,
-            to_date,
-            parse_date(booking["from_date"]),
-            parse_date(booking["to_date"]),
-        ):
-            return booking
-    return None
+    """Return an existing, non-cancelled booking for this equipment that
+    conflicts with the given dates, or None.
+
+    TODO (Task 1): implement.
+    """
+    raise NotImplementedError
+
+
+def calculate_total(daily_rate, days):
+    """Total price for a rental of this many days (see the long-rental
+    discount rule above).
+
+    TODO (Task 2): implement.
+    """
+    raise NotImplementedError
 
 
 # ---------------------------------------------------------------------------
@@ -142,7 +154,7 @@ def create_booking():
         }), 409
 
     days = rental_days(from_date, to_date)
-    total = equipment["daily_rate"] * days
+    total = calculate_total(equipment["daily_rate"], days)
 
     booking = {
         "id": (max([b["id"] for b in bookings]) + 1) if bookings else 1,
