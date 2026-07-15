@@ -2,7 +2,7 @@
 
 Thanks for taking the time to do this! You'll work with a **small app that already exists** — much like you would on the job. A few core functions are left unimplemented (they raise `NotImplementedError`) for you to fill in against the business rules described in `app.py`.
 
-It should take around **2-3 hours**. We don't expect everything to be perfect — we mostly want to see how you read unfamiliar code, reason about a spec, and track down a problem in code that isn't yours.
+It should take around **2-3 hours**. We don't expect everything to be flawless — we mostly want to see how you read unfamiliar code, reason about a spec, and track down a problem in code that isn't yours. That said, we do expect the app you send back to **work end to end in accordance with the business rules**: a customer should be able to go through the whole booking flow and get the right outcome at every step.
 
 ---
 
