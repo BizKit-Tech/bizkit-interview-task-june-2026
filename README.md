@@ -1,8 +1,8 @@
 # Take-Home Exercise — Equipment Rental
 
-Thanks for taking the time to do this! You'll work with a **small app that already exists** — much like you would on the job. A few core functions are left unimplemented (they raise `NotImplementedError`) for you to fill in against the business rules described in `app.py`, and there are a couple of existing bugs to track down and fix.
+Thanks for taking the time to do this! You'll work with a **small app that already exists** — much like you would on the job. A few core functions are left unimplemented (they raise `NotImplementedError`) for you to fill in against the business rules described in `app.py`.
 
-It should take around **3–4 hours**. We don't expect everything to be perfect — we mostly want to see how you read unfamiliar code, reason about a spec, and track down a problem in code that isn't yours.
+It should take around **2-3 hours**. We don't expect everything to be perfect — we mostly want to see how you read unfamiliar code, reason about a spec, and track down a problem in code that isn't yours.
 
 ---
 
@@ -78,28 +78,20 @@ When you're done working, you can leave the virtual environment with `deactivate
 ### 3. Add a rule: no booking equipment under maintenance
 Equipment can have a status of `maintenance` (the HD Projector is one). Right now it can still be booked and still shows up as available. **Add the rule that maintenance equipment cannot be booked**, and make sure it no longer appears as available. Think about all the places this rule needs to apply.
 
-There's more than one reasonable way to handle this in the UI. Pick one and add a one-sentence justification for your choice to `NOTES.md` (see Task 5).
+### 4. A short write-up (`NOTES.md`)
+Please include a `NOTES.md` with four quick things — keep it brief, no essays:
 
-### 4. The frontend price bug
-On the booking page, change the **start** date and the total updates. Change the **end** date and it... doesn't always. Find and fix it so the total stays correct.
-
-Once you've added the 7-day discount from Task 2, double-check this page too: the total shown *before* booking should always match what the customer is actually charged *after* booking. Don't let the preview and the confirmed total drift apart.
-
-### 5. A short write-up (`NOTES.md`)
-Please include a `NOTES.md` with five quick things — keep it brief, no essays:
-
-- **Explain one part of your solution.** Pick any one of the four tasks above and, in a few sentences, say how you approached it and why.
+- **Explain one part of your solution.** Pick any one of the three tasks above and, in a few sentences, say how you approached it and why.
 - **Show your conflict logic working.** Against the existing Jan 10–15 booking, give two concrete examples — just the dates — that your implementation correctly **blocks**, and one **legitimate same-day turnover** that it correctly **allows**. One line each is fine.
-- **Your maintenance-equipment choice.** One sentence on whether you hid maintenance equipment entirely or showed it disabled, and why (Task 3).
-- **One thing you'd flag in code review.** Name one pre-existing weakness or risk in this codebase *outside* the four tasks above — something you noticed while reading but weren't asked to fix. One or two sentences; **don't fix it.** (There are several. We'll probably chat about yours in the follow-up call.)
-- **AI use (this won't count against you).** Tell us roughly what you used AI tools for, if anything — and, importantly, **how you checked that its output was correct.** Be specific: "I tested it" is less convincing than the actual dates, requests, or commands you tried. We use AI here every day; we're just looking for people who understand what they ship, not people who avoided the tools.
+- **Your maintenance-equipment choice.** One sentence on how you chose to handle maintenance equipment in the UI, and why (Task 3).
+- **Anything worth addressing?** Spend some time running the app and using it the way a customer would. If anything stands out to you as worth addressing, tell us what it was, how you noticed it, and what (if anything) you did about it.
 
 ---
 
 ## What to send back
 
-- The fixed code, as a git repo with at least **one commit per task or per function touched (as appropriate)** (Tasks 1-4 above, plus anything else you find and fix along the way). We read the commit history as part of the review, not just the final diff, so please write descriptive commit messages.
-- Your `NOTES.md` (the five short items from Task 5).
+- The fixed code, as a git repo with at least **one commit per task or per function touched (as appropriate)** (Tasks 1-3 above, plus anything else you find and fix along the way). We read the commit history as part of the review, not just the final diff, so please write descriptive commit messages; it's the fastest way for us to follow how you got from symptom to root cause.
+- Your `NOTES.md` (the four short items from Task 4).
 
 Passing the assessment leads to a follow-up call. In that call, **we pick one of your fixes** (not you) and ask you to walk us through it — what the code does, why it's correct, what inputs would break it — and then we extend your submitted code together, live. Using AI to help you build this is completely fine; submitting code you can't explain is not. If you can navigate and defend every line of your own submission cold, the call will be easy.
 
