@@ -93,6 +93,6 @@ Please include a `NOTES.md` with four quick things — keep it brief, no essays:
 - The fixed code, as a git repo with at least **one commit per task or per function touched (as appropriate)** (Tasks 1-3 above, plus anything else you find and fix along the way). We read the commit history as part of the review, not just the final diff, so please write descriptive commit messages; it's the fastest way for us to follow how you got from symptom to root cause.
 - Your `NOTES.md` (the four short items from Task 4).
 
-Passing the assessment leads to a follow-up call. In that call, **we pick one of your fixes** (not you) and ask you to walk us through it — what the code does, why it's correct, what inputs would break it — and then we extend your submitted code together, live. Using AI to help you build this is completely fine; submitting code you can't explain is not. If you can navigate and defend every line of your own submission cold, the call will be easy.
+Passing the assessment leads to a follow-up call. In that call, **we pick one of your fixes** and ask you to walk us through it — what the code does, why it's correct, what inputs would break it — and then **we extend your submitted code** together, live. Using whatever tools and resources you normally work with to build this is completely fine; submitting code you can't explain is not. If you understand every line of your submission well enough to explain it on the spot, the call will be easy.
 
 Good luck, and thank you!
