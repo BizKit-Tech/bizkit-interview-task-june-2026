@@ -78,21 +78,21 @@ When you're done working, you can leave the virtual environment with `deactivate
 ### 3. Add a rule: no booking equipment under maintenance
 Equipment can have a status of `maintenance` (the HD Projector is one). Right now it can still be booked and still shows up as available. **Add the rule that maintenance equipment cannot be booked**, and make sure it no longer appears as available. Think about all the places this rule needs to apply.
 
-### 4. A short write-up (`NOTES.md`)
-Please include a `NOTES.md` with four quick things — keep it brief, no essays:
+### 4. A short recorded walkthrough (screen recording + your voice)
+Record a **short screen recording with your voice** — around 5 minutes, no more than 10. No editing or production polish needed, and any tool works (Loom, OBS, Windows Game Bar, QuickTime, etc.). We're not grading your English or presentation skills (Taglish is fine!), but we do want to see how well you can communicate — how clearly you can explain your own code and the thinking behind it. Cover these four things:
 
-- **Explain one part of your solution.** Pick any one of the three tasks above and, in a few sentences, say how you approached it and why.
-- **Show your conflict logic working.** Against the existing Jan 10–15 booking, give two concrete examples — just the dates — that your implementation correctly **blocks**, and one **legitimate same-day turnover** that it correctly **allows**. One line each is fine.
-- **Your maintenance-equipment choice.** One sentence on how you chose to handle maintenance equipment in the UI, and why (Task 3).
-- **Anything worth addressing?** Spend some time running the app and using it the way a customer would. If anything stands out to you as worth addressing, tell us what it was, how you noticed it, and what (if anything) you did about it.
+- **Explain your whole Task 1 solution.** Walk us through `rental_days`, `dates_overlap`, and `find_conflicting_booking` — how each one works, and why your implementation matches the business rules, including the same-day-turnover exception.
+- **Show your conflict logic working.** In the running app, against the existing Jan 10–15 booking, demonstrate two bookings that are correctly **blocked** and one legitimate same-day turnover that is correctly **allowed**.
+- **Your maintenance-equipment choice.** A brief explanation on how you chose to handle maintenance equipment in the UI, and why (Task 3).
+- **Anything else worth addressing?** By this point you've probably spent some time running the app and using it the way a customer would. If anything stood out to you as worth addressing, tell us what it was, how you noticed it, and what (if anything) you did about it.
 
 ---
 
 ## What to send back
 
 - The fixed code, as a git repo with at least **one commit per task or per function touched (as appropriate)** (Tasks 1-3 above, plus anything else you find and fix along the way). We read the commit history as part of the review, not just the final diff, so please write descriptive commit messages; it's the fastest way for us to follow how you got from symptom to root cause.
-- Your `NOTES.md` (the four short items from Task 4).
+- Your recorded walkthrough from Task 4 — either the video file itself or a link we can open without an account (e.g. Loom, unlisted YouTube, or a shared Drive link).
 
-Passing the assessment leads to a follow-up call. In that call, **we pick one of your fixes** and ask you to walk us through it — what the code does, why it's correct, what inputs would break it — and then **we extend your submitted code** together, live. Using whatever tools and resources you normally work with to build this is completely fine; submitting code you can't explain is not. If you understand every line of your submission well enough to explain it on the spot, the call will be easy.
+Passing the assessment leads to a follow-up call. In that call, **we extend your submitted code together, live, by adding a small feature**. Using whatever tools and resources you normally work with to build this is completely fine; submitting code you can't explain is not. If you understand every line of your submission well enough to work on top of it on the spot, the call will be easy.
 
 Good luck, and thank you!
